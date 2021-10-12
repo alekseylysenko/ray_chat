@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "120931177602",
+    "firebase_url": "https://soft-scanner-58624-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "soft-scanner-58624",
+    "storage_bucket": "soft-scanner-58624.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:120931177602:android:c4018d58229569ad1a109b",
+        "android_client_info": {
+          "package_name": "com.raywenderlich.RayChat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "120931177602-b7ed5pn2641133b6nqria474q4or6nk8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhsvo1Z3HgdcRAE2-FhzJZ3GyZTpVhVLE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "120931177602-b7ed5pn2641133b6nqria474q4or6nk8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
