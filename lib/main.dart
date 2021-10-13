@@ -18,9 +18,7 @@ class App extends StatelessWidget {
     // TODO: Add MultiProvider
     return MultiProvider(
       providers: [
-        Provider<MessageDao>(create: (_)=> MessageDao(),
-        lazy: false,
-        )
+        Provider<MessageDao>(create: (_)=> MessageDao(),lazy: false,),
       ],
      
       child: MaterialApp(

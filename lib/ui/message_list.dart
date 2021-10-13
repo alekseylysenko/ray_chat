@@ -1,10 +1,11 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:ntp/ntp.dart';
 import 'package:provider/provider.dart';
-import 'package:raychat/data/message.dart';
-import 'package:raychat/data/message_dao.dart';
-import 'package:raychat/ui/message_widget.dart';
+import '../data/message.dart';
+import '../data/message_dao.dart';
+import 'message_widget.dart';
 
 class MessageList extends StatefulWidget {
   const MessageList({Key? key}) : super(key: key);
@@ -16,7 +17,6 @@ class MessageList extends StatefulWidget {
 class MessageListState extends State<MessageList> {
   final TextEditingController _messageController = TextEditingController();
   final ScrollController _scrollController = ScrollController();
-  // TODO: Add Email String
 
   @override
   Widget build(BuildContext context) {
@@ -70,10 +70,11 @@ class MessageListState extends State<MessageList> {
   }
 
   // TODO: Replace _sendMessage
-  void _sendMessage(MessageDao messageDao) {
+  void _sendMessage(MessageDao messageDao) async {
+    final startDate = await NTP.now();
     if (_canSendMessage()) {
       final message =
-          Message(text: _messageController.text, date: DateTime.now());
+          Message(text: _messageController.text, date: startDate);
       messageDao.saveMessage(message);
       _messageController.clear();
       setState(() {});
@@ -91,7 +92,6 @@ class MessageListState extends State<MessageList> {
             child: CircularProgressIndicator(),
           );
         return _buildList(context, snapshot.data!.docs);
-        
       },
     ));
   }

@@ -1,5 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:raychat/data/message.dart';
+import 'message.dart';
 
 class MessageDao {
   final CollectionReference collection =
